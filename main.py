@@ -1,7 +1,6 @@
 from twitchio.ext import commands
 from datetime import datetime, timezone
-import is_up
-import uptime
+from scripts import is_up, uptime
 import sys
 import secrets
 import time
@@ -28,8 +27,8 @@ class Bot(commands.Bot):
 
         if is_up.get_stream():
             print("Stream is live")
-            stream_started = is_up.get_stream_start_time()
-            print("Stream has been up for" + uptime.calculate_time(stream_started))
+        #            stream_started = is_up.get_stream_start_time()
+        #            print("Stream has been up for" + uptime.calculate_time(stream_started))
         else:
             print("Offline")
 
